@@ -1,0 +1,222 @@
+.details_container {
+  color: var(--details-silver-clr);
+  margin: 2rem 0 10rem 0;
+  max-width: 85%;
+  height: 80vh;
+}
+
+.back_btn {
+  text-decoration: none;
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px var(--details-btn-box-shadow);
+  width: 10rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.back_btn img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+
+.back_btn:hover {
+  filter: invert(58%) sepia(9%) saturate(782%) hue-rotate(33deg) brightness(92%)
+    contrast(82%);
+}
+
+.details_inner_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0rem;
+  line-height: 2;
+}
+
+.details_inner_container img {
+  margin-right: 2rem;
+}
+
+.detail_content {
+  display: flex;
+  gap: 2rem;
+  max-width: 70rem;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+.details_container h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.detail_content h3 {
+  color: var(--clr-white);
+  background-color: var(--details-bg);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.detail_content .details_number h3 span {
+  float: none;
+  margin-left: 1rem;
+}
+.detail_content .details_number {
+  max-width: 45rem;
+}
+
+.detail_content .details_number span,
+.details_payload span {
+  font-size: 1.2rem;
+  color: var(--details-span-clr);
+  float: right;
+}
+
+.detail_content .details_number .detail {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.detail_content .details_number .detail div {
+  text-align: justify;
+  background-color: var(--details-bg);
+  color: var(--details-text-clr);
+  padding: 0.3rem 0.8rem;
+  font-size: 1.2rem;
+}
+
+.detail_content .details_number p,
+.details_payload p {
+  background-color: var(--details-bg);
+  padding: 0.3rem 0.8rem;
+
+  font-size: 1.2rem;
+}
+
+.detail_content .details_payload {
+  width: 25rem;
+  margin-left: auto;
+}
+
+.details_links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.details_links .wiki_btn {
+  text-decoration: none;
+  text-align: center;
+  color: var(--clr-white);
+  box-shadow: 2px 2px 10px var(--details-btn-box-shadow);
+  padding: 0.5rem 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.details_links .more_btn {
+  text-decoration: none;
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 10px var(--details-btn-box-shadow);
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  letter-spacing: 2px;
+}
+
+.details_links .more_btn img {
+  width: 25px;
+  height: 25px;
+  margin-left: 0.5rem;
+}
+
+.details_links .wiki_btn:hover,
+.more_btn:hover {
+  filter: invert(58%) sepia(9%) saturate(782%) hue-rotate(33deg) brightness(92%)
+    contrast(82%);
+}
+
+/* 1440 / 16 = 90em*/
+@media (max-width: 90em) {
+  .detail_content {
+    gap: 1rem;
+    width: 60rem;
+  }
+}
+
+/* 1280 / 16 = 80em*/
+@media (max-width: 80em) {
+  .detail_content {
+    width: 50rem;
+  }
+}
+/* 1110 / 16 = 699.37 */
+@media (max-width: 69.37rem) {
+  .details_inner_container {
+    flex-direction: column;
+  }
+
+  .detail_content {
+    gap: 0.5rem;
+    width: 50rem;
+    padding: 2rem;
+  }
+}
+
+/* 800 /16 = 50 */
+@media (max-width: 50em) {
+  .detail_content {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .detail_content .details_payload {
+    width: 100%;
+  }
+}
+
+/* 500 / 16= 31.25 */
+@media (max-width: 31.25em) {
+  .detail_content {
+    padding: 0;
+  }
+  .details_links {
+    padding: 2rem;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    height: 15rem;
+    font-size: 0.8rem;
+  }
+  .details_links .more_btn {
+    justify-content: center;
+    padding: 1rem 0rem 1rem 0.6rem;
+    font-size: 0.5rem;
+  }
+
+  .details_links .more_btn img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .details_container h1 {
+    font-size: 2rem;
+  }
+  .detail_content .details_number span,
+  .details_payload span,
+  .detail_content .details_number .detail,
+  .detail_content .details_number p,
+  .details_payload p {
+    font-size: 0.8rem;
+  }
+
+  .details_inner_container img {
+    width: 80%;
+    height: auto;
+  }
+}

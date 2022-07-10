@@ -1,0 +1,77 @@
+.input-container {
+  height: 4rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 8rem 0;
+  width: 50vw;
+}
+
+.input-container input {
+  height: 100%;
+  width: 100%;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: var(--clr-khaki);
+  padding-left: 1rem;
+  background-color: transparent;
+}
+
+.input-container label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--clr-khaki);
+  font-size: 1.2rem;
+}
+
+.input-container label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid var(--search-after-border-bottom);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.input-container .search-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+  color: var(--search-label);
+}
+
+input:focus + label .search-name,
+input:valid + label .search-name {
+  transform: translateY(-150%);
+  color: var(--clr-khaki);
+}
+input:focus + label::after,
+input:valid + label::after {
+  transform: translateX(0%);
+}
+
+/* 700 / 16 = 43.75em*/
+@media (max-width: 43.75em) {
+  .input-container input,
+  .search-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* 500 / 16= 31.25 */
+@media (max-width: 31.25em) {
+  .input-container {
+    margin: 12rem auto 3rem auto;
+    width: 63vw;
+  }
+}

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg: #222222;
+  --scrollbar-track-bg: #333333;
+  --scrollbar-thumb-bg: #4f5254;
+
+  --clr-white: #fff;
+  --clr-light-blue: #98c6f0;
+  --clr-khaki: #beb18a;
+  --clr-username: #2196f3;
+  --clr-delete-btn: #e28585;
+  --delete-btn-bg: #363636;
+
+  --clr-delete-btn-hover: #ff0000;
+
+  /* SCROLL */
+  --scroll-container-border-top: #beb18a;
+
+  /* NAV */
+  --nav-bg: #333333;
+  --nav-box-shadow: #00000080;
+  --nav-border-bottom: #beb18a;
+
+  /* SEARCH */
+  --search-after-border-bottom: #8bc2f3;
+  --search-label: #6d6d6d;
+
+  /* CARD */
+  --card-container: #1a1b17;
+  --card-border: #1d3a54;
+  --card-name-clr: #3b75a9;
+  --card-site-name-clr: #8bc2f3;
+  --card-container-hover: #000;
+  --card-btn-bg: #185184;
+
+  /* DETAILS */
+  --details-silver-clr: #c0c0c0;
+  --details-btn-box-shadow: #00000080;
+  --details-bg: #443c38;
+  --details-span-clr: #858b71;
+  --details-text-clr: #eb9063;
+
+  /* LOGIN */
+  --login-inner-container-bg: linear-gradient(
+    to right,
+    rgba(53, 96, 159, 0.6502976190476191) 26%,
+    rgba(9, 23, 50, 0.24693627450980393) 82%
+  );
+  --login-after-border-bottom: #327acd;
+  --login-btn-clr: #272e49;
+
+  /* REGISTER */
+  --register-inner-container-bg: linear-gradient(
+    to left,
+    rgba(53, 96, 159, 0.6502976190476191) 26%,
+    rgba(9, 23, 50, 0.24693627450980393) 82%
+  );
+}
+
+body {
+  background: var(--body-bg);
+  font-family: 'Roboto Slab', serif;
+}
+
+*::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+/* avoid "-internal-autofill-selected" style to be applied */
+input:-webkit-autofill {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+

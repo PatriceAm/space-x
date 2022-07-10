@@ -1,0 +1,21 @@
+.app_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+/* 700 / 16 = 43.75em*/
+@media (max-width: 43.75em) {
+  .search_container {
+    width: 90vw;
+  }
+}
+
+/* 500 / 16= 31.25 */
+@media (max-width: 31.25em) {
+  .app_container {
+    margin-top: auto;
+  }
+}

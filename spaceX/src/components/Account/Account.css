@@ -1,0 +1,152 @@
+.account_container {
+  max-width: 70rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.account_inner-container {
+  background: var(--login-inner-container-bg);
+  height: 40rem;
+}
+
+.account_form {
+  padding: 2rem;
+}
+
+.account_form h1 {
+  color: var(--clr-white);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.account_form p {
+  font-size: 1.2rem;
+  color: var(--clr-khaki);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.account_input-container {
+  height: 4rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.account_input-container input {
+  height: 100%;
+  width: 100%;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: var(--clr-khaki);
+  padding-left: 1rem;
+  background-color: transparent;
+}
+
+.account_input-container label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--clr-khaki);
+  font-size: 1.2rem;
+}
+
+.account_input-container label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid var(--login-after-border-bottom);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.account_input-container .account_name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+  color: var(--search-label);
+}
+
+input:focus + label .account_name,
+input:valid + label .account_name {
+  transform: translateY(-150%);
+  color: var(--clr-khaki);
+}
+input:focus + label::after,
+input:valid + label::after {
+  transform: translateX(0%);
+}
+
+.account-btn {
+  width: 20rem;
+  background: var(--clr-khaki);
+  color: var(--login-btn-clr);
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 2rem 28%;
+}
+
+.delete-account-btn {
+  width: 15rem;
+  background: var(--delete-btn-bg);
+  color: var(--clr-delete-btn);
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 2rem 33%;
+}
+
+.delete-account-btn:hover {
+  background: var(--clr-delete-btn-hover);
+  color: var(--clr-white);
+}
+
+.account-btn:hover {
+  color: var(--clr-khaki);
+  background: var(--login-btn-clr);
+}
+
+/* 1280 / 16 = 80em*/
+@media (max-width: 80em) {
+  .account_container {
+    width: 90%;
+  }
+}
+
+/* 500 / 16= 31.25 */
+@media (max-width: 31.25em) {
+  .account_container {
+    margin: 18rem auto 5rem auto;
+  }
+
+  .account_inner-container {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .account-btn {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .delete-account-btn {
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin: 0 10%;
+    width: 72%;
+  }
+}
