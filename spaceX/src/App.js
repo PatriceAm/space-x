@@ -17,6 +17,7 @@ import Register from "./components/Register/Register";
 import Loader from "./components/Loader/Loader";
 import Account from "./components/Account/Account";
 import Notification from "./components/Notification/Notification";
+import Scroll from "./components/Scroll/Scroll";
 
 import "./App.css";
 
@@ -29,6 +30,10 @@ const App = () => {
   const [searchBy, setSearchBy] = useState("");
   const [selMissName, setSelMissName] = useState(null);
   const location = useLocation();
+
+  const filteredData = launches.filter((launch) =>
+    launch.launch_year.includes(searchBy)
+  );
 
   useEffect(() => {
     dispatch(getAllLaunchesR());
@@ -90,7 +95,17 @@ const App = () => {
               !launches.length ? (
                 <Loader />
               ) : (
-                <Card searchBy={searchBy} missionSelector={missionSelector} />
+                <Scroll filteredData={filteredData}>
+                  {user && filteredData.length === 1 ? (
+                    <Details sendSearch={sendSearch} />
+                  ) : (
+                    <Card
+                      searchBy={searchBy}
+                      missionSelector={missionSelector}
+                      filteredData={filteredData}
+                    />
+                  )}
+                </Scroll>
               )
             }
           />

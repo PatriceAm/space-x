@@ -1,14 +1,7 @@
-import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import "./Card.css";
 
-const Card = ({searchBy, missionSelector}) => {
-  const allLaunchData = useSelector((state) => state.launches);
-
-  const filteredData = allLaunchData.filter((launch) =>
-    launch.launch_year.includes(searchBy)
-  );
-
+const Card = ({missionSelector, filteredData}) => {
   const clickHandler = (payloadId) => {
     missionSelector(payloadId);
   };
