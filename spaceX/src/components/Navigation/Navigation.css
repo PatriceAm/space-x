@@ -53,6 +53,15 @@
     brightness(96%) contrast(90%);
 }
 
+a {
+  text-decoration: none;
+}
+a:focus,
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
 /* 500 / 16= 31.25 */
 @media (max-width: 31.25em) {
   .navigation-container ul {
