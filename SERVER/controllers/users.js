@@ -97,13 +97,13 @@ usersRouter.delete(
     const username = request.params.username;
     const userToDelete = await User.findOne({loggedInUser});
 
-    if (userToDelete.username !== loggedInUser) {
-      return response.status(400).json({
-        error: "You can't delete another user!",
-      });
-    } else if (!userToDelete.username) {
+    if (!userToDelete.username) {
       return response.status(400).json({
         error: "Unexpected error!",
+      });
+    } else if (userToDelete.username !== loggedInUser) {
+      return response.status(400).json({
+        error: "You can't delete another user!",
       });
     }
 
