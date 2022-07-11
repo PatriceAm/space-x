@@ -14,7 +14,6 @@ import Search from "./components/Search/Search";
 import Navigation from "./components/Navigation/Navigation";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Scroll from "./components/Scroll/Scroll";
 import Loader from "./components/Loader/Loader";
 import Account from "./components/Account/Account";
 import Notification from "./components/Notification/Notification";
@@ -91,9 +90,7 @@ const App = () => {
               !launches.length ? (
                 <Loader />
               ) : (
-                <Scroll>
-                  <Card searchBy={searchBy} missionSelector={missionSelector} />
-                </Scroll>
+                <Card searchBy={searchBy} missionSelector={missionSelector} />
               )
             }
           />

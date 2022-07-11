@@ -58,3 +58,7 @@
   color: var(--card-btn-bg);
   background-color: var(--clr-white);
 }
+
+.no-matches {
+  color: var(--clr-white);
+}

@@ -21,7 +21,7 @@ const Card = ({searchBy, missionSelector}) => {
 
   return (
     <div className="all_cards_container">
-      {filteredData.length > 1 &&
+      {filteredData.length > 0 ? (
         filteredData.map((launchData) => (
           <div
             key={launchData.mission_name}
@@ -48,7 +48,10 @@ const Card = ({searchBy, missionSelector}) => {
               Details
             </Link>
           </div>
-        ))}
+        ))
+      ) : (
+        <h1 className="no-matches">No information</h1>
+      )}
     </div>
   );
 };
