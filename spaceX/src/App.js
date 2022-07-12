@@ -56,6 +56,11 @@ const App = () => {
     setSearchBy(sby);
   };
 
+  const sendInputSearch = (sby) => {
+    setSelMissName(null);
+    setSearchBy(sby);
+  };
+
   const missionSelector = (mName) => {
     setSelMissName(mName);
   };
@@ -67,7 +72,10 @@ const App = () => {
       <div className="app_container">
         {location.pathname === "/" ? (
           <>
-            <Search sendSearch={sendSearch} />
+            <Search
+              sendInputSearch={sendInputSearch}
+              missionSelector={missionSelector}
+            />
           </>
         ) : (
           ""

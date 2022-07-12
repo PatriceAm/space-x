@@ -1,5 +1,7 @@
 import axios from "axios";
-const baseUrl = "/api/users/update";
+
+const serverUrl = process.env.REACT_APP_SERVER_URL;
+const baseUrl = `${serverUrl}/api/users/update`;
 
 let token;
 const setToken = (newToken) => {
